@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Women's Health Tracker</h1>
+        
+        <!-- Menstrual Cycle Input -->
+        <section class="cycle-input">
+            <h2>Track Your Menstrual Cycle</h2>
+            <label for="lastPeriodDate">Last Period Date:</label>
+            <input type="date" id="lastPeriodDate" required>
+            
+            <label for="cycleLength">Cycle Length (Days):</label>
+            <input type="number" id="cycleLength" required>
+            
+            <button onclick="calculateCyclePhase()">Calculate Cycle Phase</button>
+            <p id="cyclePhaseResult"></p>
+        </section>
+
+        <!-- Hydration Tracker -->
+        <section class="hydration-input">
+            <h2>Track Your Hydration</h2>
+            <label for="waterIntake">Water Intake (ml):</label>
+            <input type="number" id="waterIntake" required>
+            
+            <button onclick="logWaterIntake()">Log Water Intake</button>
+            <p id="hydrationProgress"></p>
+        </section>
+  <!-- Wellness Tips -->
+  <section class="wellness-tips">
+    <h2>Wellness & Self-Care Tips</h2>
+    <p id="wellnessTips"></p>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
