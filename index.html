@@ -1,44 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's Health Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started</title>
+  <style>
+    /* General styling */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Adding the background image with a gradient fallback */
+      background: url('https://i.pinimg.com/736x/42/9a/7e/429a7e5dea9d3dbafd87d3852136ec98.jpg') no-repeat center center fixed, linear-gradient(135deg, #fce4ec, #ffcccb); 
+      background-size: cover; /* Ensures the image covers the entire screen */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333; /* Neutral dark color for readability */
+    }
+
+    /* Container styling */
+    .container {
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      border-radius: 16px; /* Softer corners */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+      transform: translateY(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px); /* Lift effect */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Heading styles */
+    h1 {
+      font-size: 2.8em;
+      color: #d81b60; /* Deep Pink */
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    /* Paragraph styles */
+    p {
+      font-size: 1.2em;
+      color: #555; /* Slightly muted gray */
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    /* Button styling */
+    .get-started-btn {
+      padding: 15px 40px;
+      background: linear-gradient(90deg, #f48fb1, #d81b60); /* Gradient button */
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .get-started-btn:hover {
+      background: linear-gradient(90deg, #d81b60, #c2185b); /* Slightly darker gradient */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .get-started-btn {
+        font-size: 1.1em;
+        padding: 12px 30px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Women's Health Tracker</h1>
-        
-        <!-- Menstrual Cycle Input -->
-        <section class="cycle-input">
-            <h2>Track Your Menstrual Cycle</h2>
-            <label for="lastPeriodDate">Last Period Date:</label>
-            <input type="date" id="lastPeriodDate" required>
-            
-            <label for="cycleLength">Cycle Length (Days):</label>
-            <input type="number" id="cycleLength" required>
-            
-            <button onclick="calculateCyclePhase()">Calculate Cycle Phase</button>
-            <p id="cyclePhaseResult"></p>
-        </section>
-
-        <!-- Hydration Tracker -->
-        <section class="hydration-input">
-            <h2>Track Your Hydration</h2>
-            <label for="waterIntake">Water Intake (ml):</label>
-            <input type="number" id="waterIntake" required>
-            
-            <button onclick="logWaterIntake()">Log Water Intake</button>
-            <p id="hydrationProgress"></p>
-        </section>
-  <!-- Wellness Tips -->
-  <section class="wellness-tips">
-    <h2>Wellness & Self-Care Tips</h2>
-    <p id="wellnessTips"></p>
-</section>
-</div>
-
-<script src="script.js"></script>
+  <div class="container">
+    <h1>Welcome To Auracycle</h1>
+    <p>Track your hydration, manage your wellness, and stay healthy with ease. Join now and take the first step toward better health!</p>
+    <!-- Link the button to the main functionality page -->
+    <a href="main.html" class="get-started-btn">Get Started</a>
+  </div>
 </body>
 </html>
