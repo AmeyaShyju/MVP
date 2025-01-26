@@ -1,68 +1,143 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4e1;  /* Light Pink */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    color: #4a4a4a;  /* Dark Gray for readability */
 }
 
+/* Container for content */
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-     width: 100vw; 
-}
-
-h1 {
+    width: 90%;
+    max-width: 1200px; /* Increased width */
+    padding: 30px;
+    background-color: #ffffff;  /* White background */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for a clean look */
     text-align: center;
+    transition: all 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+}
+
+/* Heading style */
+h1 {
+    font-size: 2.5em;
+    color: #d81b60;  /* Deep Pink */
     margin-bottom: 20px;
 }
 
-section {
+/* Form styling */
+form {
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
+input[type="date"],
+input[type="number"],
 button {
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #f8bbd0;  /* Soft Pink Border */
+    border-radius: 6px;
     width: 100%;
-    padding: 10px;
-    background-color: #041304;
+    max-width: 400px; /* Increased input width */
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+/* Input focus styles */
+input[type="date"]:focus,
+input[type="number"]:focus {
+    border-color: #d81b60; /* Deep Pink on focus */
+    outline: none;
+}
+
+/* Button style */
+button {
+    background-color: #f48fb1;  /* Soft Pink */
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
-}
-p {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
+    background-color: #d81b60;  /* Deep Pink for hover effect */
 }
 
-      
-  
+/* Hydration progress container */
+#hydrationProgress {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px; /* Increased width for better readability */
+    padding: 15px;
+    background-color: #ffe0e6;  /* Light Pink background */
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1.2em;
+    color: #ad1457;  /* Dark Pink */
+    border: 2px solid #f8bbd0; /* Border to match the theme */
+}
+
+/* Wellness tips */
+#wellnessTips {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px; /* Increased width */
+    padding: 15px;
+    background-color: #fff7fb;  /* White with pink tint */
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1.2em;
+    color: #d81b60;  /* Deep Pink */
+    border: 2px solid #f8bbd0;
+}
+
+/* Cycle phase result */
+#cyclePhaseResult {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px; /* Increased width */
+    padding: 15px;
+    background-color: #fdeff0;  /* Very Light Pink */
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1.2em;
+    color: #c2185b;  /* Medium Pink */
+    border: 2px solid #f8bbd0;
+}
+
+/* Hydration input field */
+input#waterIntake {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input[type="date"],
+    input[type="number"],
+    button {
+        max-width: 100%;
+    }
+
+    #hydrationProgress,
+    #wellnessTips,
+    #cyclePhaseResult {
+        max-width: 100%;
+    }
+}
